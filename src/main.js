@@ -9,7 +9,10 @@ import Contact from './pages/Contact'
 import Home from './pages/Home'
 import Posts from './pages/Posts'
 
+import store from './store';
+
 Vue.use(VueRouter)
+Vue.config.productionTip = false
 
 const routes = [
     { path: '/', component: Home },
@@ -26,6 +29,7 @@ const router = new VueRouter({
 /* eslint-disable no-new */
 new Vue({
     el: '#app',
+    store,
     router,
     components: { App },
     template: '<App/>'

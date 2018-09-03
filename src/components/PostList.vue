@@ -10,24 +10,15 @@
 <script src="./../node_modules/axios/dist/axios.min.js"></script>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
     name: 'PostList',
-    data() {
-        return {
-            posts: this.posts
-        }
-    },
-    mounted() {
-        const axios = require('axios');
-        let self = this;
-
-        axios.get('http://localhost:3000/posts').then(function(res) {
-            if (200 === res.status) {
-                self.posts = res.data;
-            }
-        }).catch(function(err) {
-            console.error(err);
-        });
+    computed: mapState([
+        'posts'
+    ]),
+    mounted () {
+        this.$store.dispatch('loadPosts')
     }
 }
 </script>
