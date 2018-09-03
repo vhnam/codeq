@@ -1,25 +1,20 @@
 <template>
-  <div id="app">
-  <!-- the router outlet, where all matched components would ber viewed -->
-  <router-link v-bind:to="'/'">Home</router-link>
-  <router-link v-bind:to="'/about'">About</router-link>
-  <router-view></router-view>
-  </div>
+    <div id="app">
+        <Header />
+        <router-view></router-view>
+    </div>
 </template>
 
 <script>
+import Header from './components/Header';
+
 export default {
-  name: 'app',
+    name: 'app',
+    components: {
+        Header
+    }
 }
 </script>
-<!-- styling for the component -->
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+
+<style src="./../node_modules/bootstrap/dist/css/bootstrap.min.css"></style>
+<style src="./assets/css/app.css"></style>
