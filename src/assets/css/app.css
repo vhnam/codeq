@@ -5,6 +5,10 @@
     background-color: #fff;
 }
 
+.bg-transparent {
+    background-color: transparent;
+}
+
 .bg-gradient {
     background: linear-gradient(60deg,#17b9e6 0,#a117e6 100%) no-repeat scroll center center/cover;
 }
