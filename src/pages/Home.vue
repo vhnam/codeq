@@ -19,7 +19,7 @@
 <script>
 export default {
     name: 'Home'
-};
+}
 </script>
 
 <style src="./../assets/css/home.css"></style>

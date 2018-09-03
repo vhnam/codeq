@@ -19,7 +19,7 @@
                         <input type="hidden" name="userId" value="11" />
                         <button class="btn btn-primary" type="submit">Submit</button>
                     </form>
-                </div>                
+                </div>
             </div>
         </div>
     </div>
@@ -27,7 +27,7 @@
 
 <script>
 export default {
-  name: 'contact'
+    name: 'contact'
 }
 </script>
 
