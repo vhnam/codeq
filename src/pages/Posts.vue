@@ -1,22 +1,25 @@
 <template>
-  <div id="posts">
-  Posts Page
-  </div>
+    <div class="posts">
+        <div class="container">
+            <div class="jumbotron bg-primary text-white">
+                <h1 class="display-5">Posts</h1>
+                <p class="lead">We’re a global team with global ambitions. Using our patent pending technologies, we’re focused on empowering developers with natural language processing technologies.</p>
+            </div>
+            <PostList />
+        </div>
+    </div>
 </template>
 
 <script>
+
+import PostList from './../components/PostList'
+
 export default {
-  name: 'posts'
+    name: 'posts',
+    components: {
+        PostList
+    }
 }
 </script>
-<!-- styling for the component -->
-<style>
-#posts {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+
+<style src="./../assets/css/posts.css"></style>
